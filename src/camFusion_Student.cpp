@@ -148,7 +148,7 @@ void clusterKptMatchesWithROI(BoundingBox &boundingBox, std::vector<cv::KeyPoint
     for  (auto it = kptMatchesRoi.begin(); it != kptMatchesRoi.end(); ++it)  
          accumulatedDist += it->distance; 
     double meanDist = accumulatedDist / kptMatchesRoi.size();  
-    double threshold = meanDist * 0.7;        
+    double threshold = meanDist / 0.7;        
     for  (auto it = kptMatchesRoi.begin(); it != kptMatchesRoi.end(); ++it)
     {
        if (it->distance < threshold)
@@ -209,6 +209,7 @@ void computeTTCCamera(std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyPo
     TTC = -dT / (1 - medDistRatio);
 
     cout << "medDistRatio=" << medDistRatio << endl; 
+    cout << "TTC measured by camera = " << TTC << endl;
 }
 
 
@@ -238,45 +239,87 @@ void computeTTCLidar(std::vector<LidarPoint> &lidarPointsPrev,
     cout << "medianXCurr=" << medianXCurr << endl;
 
     TTC = medianXCurr * dT / (medianXPrev - medianXCurr);
+    cout << "TTC measured by lidar = " << TTC << endl;
 }
 
 
 void matchBoundingBoxes(std::vector<cv::DMatch> &matches, std::map<int, int> &bbBestMatches, DataFrame &prevFrame, DataFrame &currFrame)
 {
-    std::map<int, std::multiset<int>> multiBBmatches;
-    for (const auto& match : matches) {
-        cv::KeyPoint prevKpt = prevFrame.keypoints[match.queryIdx];
-        cv::KeyPoint currKpt = currFrame.keypoints[match.trainIdx]; 
-        std::vector<int> prevIds, currIds; 
-        for (const auto& box : prevFrame.boundingBoxes) {
-            if (box.roi.contains(prevKpt.pt))
-                prevIds.push_back(box.boxID); 
-        }
-        for (const auto& box : currFrame.boundingBoxes) {
-            if (box.roi.contains(prevKpt.pt))
-                currIds.push_back(box.boxID); 
-        }
+    // method 1:
+    // std::map<int, std::multiset<int>> multiBBmatches;
+    // for (const auto& match : matches) {
+    //     cv::KeyPoint prevKpt = prevFrame.keypoints[match.queryIdx];
+    //     cv::KeyPoint currKpt = currFrame.keypoints[match.trainIdx]; 
+    //     std::vector<int> prevIds, currIds; 
+    //     for (const auto& box : prevFrame.boundingBoxes) {
+    //         if (box.roi.contains(prevKpt.pt))
+    //             prevIds.push_back(box.boxID); 
+    //     }
+    //     for (const auto& box : currFrame.boundingBoxes) {
+    //         if (box.roi.contains(prevKpt.pt))
+    //             currIds.push_back(box.boxID); 
+    //     }
         
-        for (auto prevId : prevIds) {
-            for (auto currId : currIds) {
-                // finding all matched bounding boxes if both bb for prev and curr frame contain matched keypoint 
-                multiBBmatches[prevId].insert(currId);
-            }
-        }
-    }
+    //     for (auto prevId : prevIds) {
+    //         for (auto currId : currIds) {
+    //             // finding all matched bounding boxes if both bb for prev and curr frame contain matched keypoint 
+    //             multiBBmatches[prevId].insert(currId);
+    //         }
+    //     }
+    // }
 
-    for (auto bbMatches : multiBBmatches) {
+    // for (auto bbMatches : multiBBmatches) {
+    //     int bestCurrId = 0, maxCount = 0;
+    //     // for each matched bb in previous frame, choose the best-bb in current frame that contains the most number of matched keypoints 
+    //     for (auto it = bbMatches.second.begin(); it != bbMatches.second.end(); ++it) {
+    //         int count = bbMatches.second.count(*it);
+    //         if (count > maxCount) {
+    //             bestCurrId = *it; 
+    //             maxCount = count;
+    //         }
+
+    //     }
+    //     if (maxCount) {
+    //         bbBestMatches.insert({bbMatches.first, bestCurrId}); 
+    //         std::cout << "match times: " << maxCount << " prevId: " << bbMatches.first << " currId: " << bestCurrId << std::endl;
+    //     }
+    // }
+
+
+    // method 2:
+    // loop for bounding box in previous frame 
+    for (const auto& prevBb : prevFrame.boundingBoxes) {
+        // find related bounding boxes in current frame that both bb in previous frame and current frame contain same keypoint
+        std::multiset<int> currBbIds; 
+        // loop for matched keypoints 
+        for (const auto& match : matches) {
+            cv::KeyPoint prevKpt = prevFrame.keypoints[match.queryIdx];
+            cv::KeyPoint currKpt = currFrame.keypoints[match.trainIdx]; 
+            if (!prevBb.roi.contains(prevKpt.pt)) {
+                continue; // skip this match if the prevBb doesn't contain this keypoint
+            }
+            // loop for bounding box in current frame 
+            for (const auto& currBb : currFrame.boundingBoxes) {
+                if (!currBb.roi.contains(currKpt.pt)) {
+                    continue; // skip this bb if currBb doesn't contain this keypoint
+                }
+                currBbIds.insert(currBb.boxID); 
+            }
+
+        }
+
+        // find the best match bounding box in current frame that contains the highest number of matched keypoint
         int bestCurrId = 0, maxCount = 0;
-        // for each matched bb in previous frame, choose the best-bb in current frame that contains the most number of matched keypoints 
-        for (auto it = bbMatches.second.begin(); it != bbMatches.second.end(); ++it) {
-            int count = bbMatches.second.count(*it);
-            if (count > maxCount)
+        for (auto it = currBbIds.begin(); it != currBbIds.end(); ++it) {
+            int count = currBbIds.count(*it);
+            if (count > maxCount) {
                 bestCurrId = *it; 
                 maxCount = count;
+            }
         }
         if (maxCount) {
-            bbBestMatches.insert({bbMatches.first, bestCurrId}); 
-            // std::cout << "match times: " << maxCount << " prevId: " << bbMatches.first << " currId: " << bestCurrId << std::endl;
+            bbBestMatches.insert({prevBb.boxID, bestCurrId}); 
+            std::cout << "match times: " << maxCount << " prevId: " << prevBb.boxID << " currId: " << bestCurrId << std::endl;
         }
     }
 

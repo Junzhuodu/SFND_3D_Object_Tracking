@@ -1,0 +1,439 @@
+../images/KITTI/2011_09_26/image_02/data/0000000000.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1723 keypoints in 11.1141 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 1.08196 ms
+#6 : EXTRACT DESCRIPTORS done
+../images/KITTI/2011_09_26/image_02/data/0000000001.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1759 keypoints in 11.0675 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.815294 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=102 matches in 1.65566 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 10 prevId: 2 currId: 2
+match times: 1 prevId: 4 currId: 8
+match times: 63 prevId: 5 currId: 5
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=2 lidarPoints size=0; currBB ID=2 lidarPoints size=0
+prevBB ID=4 lidarPoints size=0; currBB ID=8 lidarPoints size=0
+prevBB ID=5 lidarPoints size=326; currBB ID=5 lidarPoints size=338
+lidarPointsPrev size=326
+lidarPointsCurr size=338
+medianXPrev=8.074
+medianXCurr=8.01
+TTC measured by lidar = 12.5156
+Leave 52 matches
+distRatios size=697
+medDistRatio=1.00766
+TTC measured by camera = 13.0594
+Press key to continue to next frame
+../images/KITTI/2011_09_26/image_02/data/0000000002.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1820 keypoints in 8.27243 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.779809 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=113 matches in 1.42669 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 12 prevId: 2 currId: 5
+match times: 73 prevId: 5 currId: 3
+match times: 1 prevId: 8 currId: 3
+match times: 2 prevId: 9 currId: 3
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=2 lidarPoints size=0; currBB ID=5 lidarPoints size=0
+prevBB ID=5 lidarPoints size=338; currBB ID=3 lidarPoints size=305
+lidarPointsPrev size=338
+lidarPointsCurr size=305
+medianXPrev=8.01
+medianXCurr=7.947
+TTC measured by lidar = 12.6142
+Leave 57 matches
+distRatios size=765
+medDistRatio=1.0052
+TTC measured by camera = 19.2186
+Press key to continue to next frame
+prevBB ID=8 lidarPoints size=0; currBB ID=3 lidarPoints size=305
+prevBB ID=9 lidarPoints size=0; currBB ID=3 lidarPoints size=305
+../images/KITTI/2011_09_26/image_02/data/0000000003.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1850 keypoints in 13.3318 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.780176 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=116 matches in 1.44354 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 75 prevId: 3 currId: 5
+match times: 11 prevId: 5 currId: 10
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=3 lidarPoints size=305; currBB ID=5 lidarPoints size=321
+lidarPointsPrev size=305
+lidarPointsCurr size=321
+medianXPrev=7.947
+medianXCurr=7.891
+TTC measured by lidar = 14.091
+Leave 62 matches
+distRatios size=851
+medDistRatio=1.00902
+TTC measured by camera = 11.0889
+Press key to continue to next frame
+prevBB ID=5 lidarPoints size=0; currBB ID=10 lidarPoints size=0
+../images/KITTI/2011_09_26/image_02/data/0000000004.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1828 keypoints in 8.17512 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.754844 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=107 matches in 1.41919 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 6 prevId: 4 currId: 4
+match times: 70 prevId: 5 currId: 6
+match times: 5 prevId: 8 currId: 5
+match times: 11 prevId: 10 currId: 6
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=0; currBB ID=4 lidarPoints size=0
+prevBB ID=5 lidarPoints size=321; currBB ID=6 lidarPoints size=319
+lidarPointsPrev size=321
+lidarPointsCurr size=319
+medianXPrev=7.891
+medianXCurr=7.844
+TTC measured by lidar = 16.6894
+Leave 55 matches
+distRatios size=588
+medDistRatio=1.00863
+TTC measured by camera = 11.5895
+Press key to continue to next frame
+prevBB ID=8 lidarPoints size=0; currBB ID=5 lidarPoints size=0
+prevBB ID=10 lidarPoints size=0; currBB ID=6 lidarPoints size=319
+../images/KITTI/2011_09_26/image_02/data/0000000005.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1806 keypoints in 7.98122 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 1.00131 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=102 matches in 1.79925 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 10 prevId: 4 currId: 4
+match times: 4 prevId: 5 currId: 6
+match times: 69 prevId: 6 currId: 5
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=0; currBB ID=4 lidarPoints size=0
+prevBB ID=5 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+prevBB ID=6 lidarPoints size=319; currBB ID=5 lidarPoints size=340
+lidarPointsPrev size=319
+lidarPointsCurr size=340
+medianXPrev=7.844
+medianXCurr=7.795
+TTC measured by lidar = 15.9082
+Leave 57 matches
+distRatios size=735
+medDistRatio=1.00785
+TTC measured by camera = 12.7336
+Press key to continue to next frame
+../images/KITTI/2011_09_26/image_02/data/0000000006.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1877 keypoints in 8.30568 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.970153 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=115 matches in 1.40452 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 10 prevId: 4 currId: 3
+match times: 74 prevId: 5 currId: 6
+match times: 8 prevId: 6 currId: 4
+match times: 7 prevId: 7 currId: 8
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=0; currBB ID=3 lidarPoints size=0
+prevBB ID=5 lidarPoints size=340; currBB ID=6 lidarPoints size=345
+lidarPointsPrev size=340
+lidarPointsCurr size=345
+medianXPrev=7.795
+medianXCurr=7.734
+TTC measured by lidar = 12.6787
+Leave 57 matches
+distRatios size=636
+medDistRatio=1.00745
+TTC measured by camera = 13.4234
+Press key to continue to next frame
+prevBB ID=6 lidarPoints size=0; currBB ID=4 lidarPoints size=0
+prevBB ID=7 lidarPoints size=0; currBB ID=8 lidarPoints size=0
+../images/KITTI/2011_09_26/image_02/data/0000000007.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1894 keypoints in 9.34786 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.900878 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=110 matches in 1.38068 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 9 prevId: 3 currId: 5
+match times: 7 prevId: 4 currId: 6
+match times: 77 prevId: 6 currId: 4
+match times: 2 prevId: 8 currId: 6
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=3 lidarPoints size=0; currBB ID=5 lidarPoints size=0
+prevBB ID=4 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+prevBB ID=6 lidarPoints size=345; currBB ID=4 lidarPoints size=315
+lidarPointsPrev size=345
+lidarPointsCurr size=315
+medianXPrev=7.734
+medianXCurr=7.67
+TTC measured by lidar = 11.9844
+Leave 60 matches
+distRatios size=751
+medDistRatio=1.00736
+TTC measured by camera = 13.5893
+Press key to continue to next frame
+prevBB ID=8 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+../images/KITTI/2011_09_26/image_02/data/0000000008.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1889 keypoints in 8.15553 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.80021 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=107 matches in 1.31606 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 79 prevId: 4 currId: 5
+match times: 7 prevId: 5 currId: 4
+match times: 7 prevId: 6 currId: 6
+match times: 1 prevId: 8 currId: 6
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=315; currBB ID=5 lidarPoints size=307
+lidarPointsPrev size=315
+lidarPointsCurr size=307
+medianXPrev=7.67
+medianXCurr=7.612
+TTC measured by lidar = 13.1241
+Leave 65 matches
+distRatios size=949
+medDistRatio=1.00702
+TTC measured by camera = 14.2388
+Press key to continue to next frame
+prevBB ID=5 lidarPoints size=0; currBB ID=4 lidarPoints size=0
+prevBB ID=6 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+prevBB ID=8 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+../images/KITTI/2011_09_26/image_02/data/0000000009.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1917 keypoints in 8.04119 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.824963 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=99 matches in 1.34501 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 7 prevId: 4 currId: 7
+match times: 73 prevId: 5 currId: 4
+match times: 3 prevId: 6 currId: 4
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=0; currBB ID=7 lidarPoints size=0
+prevBB ID=5 lidarPoints size=307; currBB ID=4 lidarPoints size=302
+lidarPointsPrev size=307
+lidarPointsCurr size=302
+medianXPrev=7.612
+medianXCurr=7.554
+TTC measured by lidar = 13.0241
+Leave 57 matches
+distRatios size=794
+medDistRatio=1.00881
+TTC measured by camera = 11.3526
+Press key to continue to next frame
+prevBB ID=6 lidarPoints size=0; currBB ID=4 lidarPoints size=302
+../images/KITTI/2011_09_26/image_02/data/0000000010.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1874 keypoints in 9.10846 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.774035 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=102 matches in 1.24817 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 77 prevId: 4 currId: 4
+match times: 4 prevId: 5 currId: 5
+match times: 7 prevId: 7 currId: 6
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=302; currBB ID=4 lidarPoints size=278
+lidarPointsPrev size=302
+lidarPointsCurr size=278
+medianXPrev=7.554
+medianXCurr=7.487
+TTC measured by lidar = 11.1746
+Leave 65 matches
+distRatios size=1102
+medDistRatio=1.00784
+TTC measured by camera = 12.7563
+Press key to continue to next frame
+prevBB ID=5 lidarPoints size=0; currBB ID=5 lidarPoints size=0
+prevBB ID=7 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+../images/KITTI/2011_09_26/image_02/data/0000000011.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1912 keypoints in 7.97177 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.709993 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=89 matches in 1.21459 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 68 prevId: 4 currId: 4
+match times: 1 prevId: 5 currId: 4
+match times: 4 prevId: 6 currId: 4
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=278; currBB ID=4 lidarPoints size=300
+lidarPointsPrev size=278
+lidarPointsCurr size=300
+medianXPrev=7.487
+medianXCurr=7.429
+TTC measured by lidar = 12.8086
+Leave 52 matches
+distRatios size=702
+medDistRatio=1.00932
+TTC measured by camera = 10.7269
+Press key to continue to next frame
+prevBB ID=5 lidarPoints size=0; currBB ID=4 lidarPoints size=300
+prevBB ID=6 lidarPoints size=0; currBB ID=4 lidarPoints size=300
+../images/KITTI/2011_09_26/image_02/data/0000000012.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1930 keypoints in 8.89969 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.940295 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=100 matches in 1.36887 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 79 prevId: 4 currId: 4
+match times: 4 prevId: 5 currId: 6
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=300; currBB ID=4 lidarPoints size=300
+lidarPointsPrev size=300
+lidarPointsCurr size=300
+medianXPrev=7.429
+medianXCurr=7.347
+TTC measured by lidar = 8.95978
+Leave 58 matches
+distRatios size=972
+medDistRatio=1.00936
+TTC measured by camera = 10.6807
+Press key to continue to next frame
+prevBB ID=5 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+../images/KITTI/2011_09_26/image_02/data/0000000013.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1881 keypoints in 8.74346 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.892271 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=103 matches in 1.27724 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 83 prevId: 4 currId: 1
+match times: 7 prevId: 6 currId: 6
+match times: 7 prevId: 8 currId: 7
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=4 lidarPoints size=300; currBB ID=1 lidarPoints size=314
+lidarPointsPrev size=300
+lidarPointsCurr size=314
+medianXPrev=7.347
+medianXCurr=7.274
+TTC measured by lidar = 9.96439
+Leave 67 matches
+distRatios size=1239
+medDistRatio=1.00824
+TTC measured by camera = 12.1312
+Press key to continue to next frame
+prevBB ID=6 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+prevBB ID=8 lidarPoints size=0; currBB ID=7 lidarPoints size=0
+../images/KITTI/2011_09_26/image_02/data/0000000014.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1886 keypoints in 8.81405 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.780947 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=108 matches in 1.26499 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 83 prevId: 1 currId: 1
+match times: 4 prevId: 4 currId: 1
+match times: 7 prevId: 6 currId: 6
+match times: 5 prevId: 7 currId: 1
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=1 lidarPoints size=314; currBB ID=1 lidarPoints size=305
+lidarPointsPrev size=314
+lidarPointsCurr size=305
+medianXPrev=7.274
+medianXCurr=7.199
+TTC measured by lidar = 9.59863
+Leave 62 matches
+distRatios size=896
+medDistRatio=1.00859
+TTC measured by camera = 11.6472
+Press key to continue to next frame
+prevBB ID=4 lidarPoints size=0; currBB ID=1 lidarPoints size=305
+prevBB ID=6 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+prevBB ID=7 lidarPoints size=0; currBB ID=1 lidarPoints size=305
+../images/KITTI/2011_09_26/image_02/data/0000000015.png
+#1 : LOAD IMAGE INTO BUFFER done
+#2 : DETECT & CLASSIFY OBJECTS done
+#3 : CROP LIDAR POINTS done
+#4 : CLUSTER LIDAR POINT CLOUD done
+Shi-Tomasi detection with n=1957 keypoints in 8.21656 ms
+#5 : DETECT KEYPOINTS done
+BRIEF descriptor extraction in 0.719947 ms
+#6 : EXTRACT DESCRIPTORS done
+MAT_FLANN , SEL_KNN find n=106 matches in 1.24273 ms
+#7 : MATCH KEYPOINT DESCRIPTORS done
+match times: 79 prevId: 1 currId: 1
+match times: 4 prevId: 4 currId: 1
+match times: 10 prevId: 6 currId: 6
+match times: 2 prevId: 8 currId: 6
+#8 : TRACK 3D OBJECT BOUNDING BOXES done
+prevBB ID=1 lidarPoints size=305; currBB ID=1 lidarPoints size=286
+lidarPointsPrev size=305
+lidarPointsCurr size=286
+medianXPrev=7.199
+medianXCurr=7.116
+TTC measured by lidar = 8.57352
+Leave 66 matches
+distRatios size=974
+medDistRatio=1.00909
+TTC measured by camera = 11
+Press key to continue to next frame
+prevBB ID=4 lidarPoints size=0; currBB ID=1 lidarPoints size=286
+prevBB ID=6 lidarPoints size=0; currBB ID=6 lidarPoints size=0
+prevBB ID=8 lidarPoints size=0; currBB ID=6 lidarPoints size=0
